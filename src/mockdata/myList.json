@@ -1,0 +1,41 @@
+[{
+        "id": 1,
+        "image": "peakyBlinders",
+        "title": "Peaky Blinders"
+    },
+    {
+        "id": 2,
+        "image": "goodWillHunting",
+        "title": "Good Will Hunting"
+    },
+    {
+        "id": 3,
+        "image": "johnMulaneyKG",
+        "title": "John Mulaney Kid Gorgeous at Radio City"
+    },
+    {
+        "id": 4,
+        "image": "blackmirror",
+        "title": "Show 4"
+    },
+    {
+        "id": 5,
+        "image": "kgf",
+        "title": "Show 5"
+    },
+    {
+        "id": 6,
+        "image": "crashlanding",
+        "title": "Show 6"
+    },
+    {
+        "id": 7,
+        "image": "itaweon",
+        "title": "Show 7"
+    },
+    {
+        "id": 8,
+        "image": "startup",
+        "title": "Show 8"
+    }
+]
