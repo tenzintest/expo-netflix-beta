@@ -23,6 +23,6 @@ export const fetchCredits =async (id) => {
       (dir) => dir.known_for_department === 'Directing'
     );
     const credits = response.data;
-    return { director: director, credits: credits };
+    return [{ director: director, credits: credits }];
   
 };

@@ -6,6 +6,7 @@ import HomeScreen from '../screens/Home';
 import TvShowsScreen from '../screens/TvShows';
 import MoviesScreen from '../screens/Movie';
 import MyListScreen from '../screens/MyList';
+import MovieDetail from '../screens/MovieDetail';
 
 const Stack = createNativeStackNavigator();
 
@@ -35,6 +36,16 @@ export default () => (
         headerShown: false
       }}
     />
+
+    <Stack.Screen
+      name="MoviesDetail"
+      component={MovieDetail}
+      options={{
+        animationEnabled: false,
+        headerShown: false
+      }}
+      />
+
     <Stack.Screen
       name="MyList"
       component={MyListScreen}
@@ -43,5 +54,6 @@ export default () => (
         headerShown: false
       }}
     />
+
   </Stack.Navigator>
 );

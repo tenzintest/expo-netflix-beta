@@ -11,6 +11,8 @@ import ModalCastConnect from '../screens/ModalCastConnect';
 import ModalManageProfiles from '../screens/ModalManageProfiles';
 import ModalVideo from '../screens/ModalVideo';
 import ModalWebView from '../screens/ModalWebView';
+import MovieDetail from '../screens/MovieDetail';
+import MyList from '../screens/MyList';
 
 const Stack = createNativeStackNavigator();
 
@@ -28,6 +30,10 @@ export default () => (
           headerShown: false
         }}
       />
+
+      <Stack.Screen name="MyList" component={MyList}/>
+
+      <Stack.Screen name="MovieDetail" component={MovieDetail}/>
 
       <Stack.Screen
         name="ModalAddProfile"

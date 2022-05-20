@@ -1,11 +1,20 @@
 import * as React from 'react';
-import { Text, View,Image } from 'react-native';
+import { 
+  Text, 
+  View,
+  Image,
+  TouchableOpacity
+} from 'react-native';
 import { gStyle } from '../constants';
 
 // components
 import Cast from '../components/Cast';
 import HeaderHome from '../components/HeaderHome';
-import { FlatList } from 'react-native-gesture-handler';
+import { FlatList, ScrollView } from 'react-native-gesture-handler';
+import { useNavigation } from '@react-navigation/native';
+import MovieDetail from './MovieDetail';
+
+
 
 
 const movies = [
@@ -19,24 +28,37 @@ const movies = [
   }, {
     id: 3,
     poster: "https://images.unsplash.com/photo-1635805739892-ab7b431400f7?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774"
+  },
+  {
+    id: 4,
+    poster: "https://images.unsplash.com/photo-1635805739892-ab7b431400f7?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774"
+  },
+  {
+    id: 5,
+    poster: "https://images.unsplash.com/photo-1635805739892-ab7b431400f7?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774"
+  }, {
+    id: 3,
+    poster: "https://images.unsplash.com/photo-1635805739892-ab7b431400f7?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774"
   }
 ]
 
 
 
-const Movies = () => (
+const Movies = ({ navigation }) => {
+  // const navigation = useNavigation();
 
-  
+  return(
   <View style={gStyle.container}>
     <HeaderHome show />
 
     <View style={gStyle.spacer12} />
-
+    <ScrollView>
     <View style={gStyle.pHHalf}>
       <Text style={gStyle.heading}>Movies</Text>
       <FlatList 
         data={movies}
-        renderItem={({ item, index }) => {
+        keyExtractor={({id}, index) => id}
+        renderItem={({ item }) => {
           return (
             <View
             style={{ 
@@ -45,10 +67,10 @@ const Movies = () => (
                 justifyContent: "center",
                 paddingTop: 10, 
                 paddingBottom: 15}}>
-              {/* <TouchableOpacity
-                onPress={() =>
-                  navigation.navigate('Movie', { movie: item })
-                }> */}
+              <TouchableOpacity
+                onPress={() => 
+                  navigation.navigate('MovieDetail', { movie: item})
+                }>
                 <Image
                   source={{
                     uri: `${item.poster}`,
@@ -65,16 +87,17 @@ const Movies = () => (
                     }}
                 />
 
-                <Text style={{ color: "white"}}>{item.title}</Text>
-              {/* </TouchableOpacity> */}
+              </TouchableOpacity>
             </View>
           );
         }}
       />
     </View>
+    </ScrollView>
 
     <Cast />
   </View>
-);
+  )
+};
 
 export default Movies;
