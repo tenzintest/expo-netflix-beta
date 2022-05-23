@@ -9,6 +9,7 @@ import MovieDetail from './MovieDetail';
 import Cast from '../components/Cast';
 import HeaderHome from '../components/HeaderHome';
 import { fetchMovies } from '../../servises/servises';
+import MovieDetailApi from './MovieDetailApi';
 
 const MyList = ({ navigation }) => {
 
@@ -42,7 +43,7 @@ const MyList = ({ navigation }) => {
             paddingTop: 10, paddingBottom: 15}}>
               <TouchableOpacity
                 onPress={() =>
-                  navigation.navigate('MovieDetail', { movie: item })
+                  navigation.navigate('MovieDetailApi', { movie: item })
                 }>
                 <Image
                   source={{

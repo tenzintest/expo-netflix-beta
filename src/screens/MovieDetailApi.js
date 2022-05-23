@@ -6,9 +6,8 @@ import { fetchCredits } from '../../servises/servises';
 // components
 import Header from '../components/Header';
 import MyList from './MyList';
-import HeaderHome from '../components/HeaderHome';
 
-const MovieDetail = ({ navigation, route }) => {
+const MovieDetailApi = ({ navigation, route }) => {
   const [credits, setCredits] = useState(null);
   const [loading, setLoading] = useState(true);
   const [director, setDirector] = useState('');
@@ -27,7 +26,7 @@ const MovieDetail = ({ navigation, route }) => {
     <View style={gStyle.container}>
       <Image
             source={{
-                      uri: `${movie.poster}`
+                      uri: `http://image.tmdb.org/t/p/w780${movie.poster_path}`
                     }}
                     resizeMode="stretch"
                     style={{
@@ -94,4 +93,4 @@ const styles = StyleSheet.create({
 });
 
 
-export default MovieDetail;
+export default MovieDetailApi;

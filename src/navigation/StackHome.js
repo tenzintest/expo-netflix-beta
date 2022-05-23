@@ -7,6 +7,7 @@ import TvShowsScreen from '../screens/TvShows';
 import MoviesScreen from '../screens/Movie';
 import MyListScreen from '../screens/MyList';
 import MovieDetail from '../screens/MovieDetail';
+import MovieDetailApi from '../screens/MovieDetailApi';
 
 const Stack = createNativeStackNavigator();
 
@@ -46,6 +47,14 @@ export default () => (
       }}
       />
 
+    <Stack.Screen
+      name="MoviesDetailApi"
+      component={MovieDetailApi}
+      options={{
+        animationEnabled: false,
+        headerShown: false
+      }}
+      />
     <Stack.Screen
       name="MyList"
       component={MyListScreen}
