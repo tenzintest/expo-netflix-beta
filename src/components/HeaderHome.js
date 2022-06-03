@@ -41,7 +41,7 @@ const HeaderHome = ({ all, show }) => {
         activeOpacity={gStyle.activeOpacity}
         onPress={() => navigation.navigate('Home')}
       >
-        <Image source={images.netflixTransparent} style={styles.logo} />
+        <Image source={""} style={styles.logo} />
       </TouchableOpacity>
 
       <View style={styles.containerMenu}>
@@ -59,7 +59,7 @@ const HeaderHome = ({ all, show }) => {
             />
             <TouchText
               onPress={() => navigation.navigate('MyList')}
-              text="My List"
+              text="Animations"
               textStyle={styles.text}
             />
           </React.Fragment>
@@ -84,9 +84,9 @@ HeaderHome.propTypes = {
 const styles = StyleSheet.create({
   container: {
     alignItems: 'flex-start',
-    backgroundColor: colors.black20,
+    backgroundColor: colors.black10,
     flexDirection: 'row',
-    paddingBottom: 4,
+    paddingBottom: 25,
     paddingHorizontal: 16,
     paddingTop: device.iPhoneNotch ? 54 : 30,
     position: 'absolute',
@@ -94,9 +94,9 @@ const styles = StyleSheet.create({
     zIndex: 10
   },
   logo: {
-    height: 35,
-    marginRight: 48,
-    width: 20
+    height: 15,
+    marginRight: 50,
+    width: 5
   },
   containerMenu: {
     alignItems: 'center',
@@ -107,7 +107,9 @@ const styles = StyleSheet.create({
   text: {
     color: colors.white,
     fontFamily: fonts.medium,
-    marginRight: 24
+    marginRight: 24,
+    fontSize: 16,
+    letterSpacing: 0.4
   }
 });
 

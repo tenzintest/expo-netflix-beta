@@ -46,11 +46,12 @@ const styles = StyleSheet.create({
     backgroundColor: colors.infoGrey,
     height: 131,
     marginRight: 8,
-    width: 91
+    width: 91,
   },
   rectangleImage: {
     height: 131,
     marginRight: 8,
+    paddingTop: 10,
     resizeMode: 'contain',
     width: 91
   },

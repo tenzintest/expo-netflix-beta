@@ -10,8 +10,8 @@ import Header from '../components/Header';
 import SvgDownloads from '../icons/Svg.Downloads';
 
 const Downloads = () => (
-  <View style={gStyle.container}>
-    <Header bg={colors.headerBarBg} title="My Downloads" />
+  <View style={gStyle.containers}>
+    <Header bg={colors.black} style={styles.text} title="My Downloads" />
 
     <View style={styles.containerIcon}>
       <SvgDownloads fill={colors.bgGrey} size={80} />
@@ -30,6 +30,11 @@ const Downloads = () => (
 );
 
 const styles = StyleSheet.create({
+
+  text: {
+    alignItems: 'flex-start'
+  },
+
   containerIcon: {
     alignItems: 'center',
     alignSelf: 'center',
@@ -41,6 +46,7 @@ const styles = StyleSheet.create({
     marginTop: 48,
     width: 140
   },
+
   description: {
     alignSelf: 'center',
     color: colors.white,

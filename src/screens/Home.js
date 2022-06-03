@@ -65,25 +65,25 @@ const Home = () => {
       >
         <PromotionBanner />
 
-        <Text style={gStyle.heading}>Previews</Text>
-        <ShowScroller dataset="previews" type="round" />
-
-        <Text style={gStyle.heading}>My List</Text>
+        <Text style={gStyle.heading}>Top 10 movies</Text>
         <ShowScroller dataset="myList" />
 
-        <Text style={gStyle.heading}>Popular on Netflix</Text>
+        <Text style={gStyle.heading}>Top 10 horror movies</Text>
+        <ShowScroller dataset="myList" />
+
+        <Text style={gStyle.heading}>Top 10 thriller movies</Text>
         <Popular dataset={movies}/>
 
-        <Text style={gStyle.heading}>Trending Now</Text>
+        <Text style={gStyle.heading}>Top 10 actions movies</Text>
         <ShowScroller />
 
-        <Text style={gStyle.heading}>Watch It Again</Text>
+        <Text style={gStyle.heading}>Top 10 sci-fi movies</Text>
         <ShowScroller />
 
-        <Text style={gStyle.heading}>NETFLIX ORIGINALS</Text>
+        <Text style={gStyle.heading}>Top 10 romance movies</Text>
         <ShowScroller />
 
-        <Text style={gStyle.heading}>Documentaries</Text>
+        <Text style={gStyle.heading}>Top 10 documentaries </Text>
         <ShowScroller />
 
         <View style={gStyle.spacer3} />

@@ -22,9 +22,9 @@ const PromotionBanner = () => {
       style={styles.imageBackground}
     >
       <View style={styles.containerContent}>
-        <Image source={images.logoBander} style={styles.image} />
+        {/* <Image source={images.logoBander} style={styles.image} /> */}
 
-        <View style={gStyle.flexRowSpace}>
+        {/* <View style={gStyle.flexRowSpace}>
           <TouchTextIcon
             icon={icon}
             onPress={() => setAdded(!added)}
@@ -34,7 +34,7 @@ const PromotionBanner = () => {
           <PromotionPlay onPress={() => null} />
 
           <TouchTextIcon icon={<SvgInfo />} onPress={() => null} text="Info" />
-        </View>
+        </View> */}
       </View>
     </ImageBackground>
   );
@@ -42,18 +42,22 @@ const PromotionBanner = () => {
 
 const styles = StyleSheet.create({
   imageBackground: {
-    height: 480
+    marginTop: 100,
+    height: 450,
+    top: 15
+    // zIndex: 1
   },
   containerContent: {
+    paddingTop: 30,
     bottom: 24,
     position: 'absolute',
     width: '100%',
     zIndex: 1
   },
   image: {
+    paddingTop: 30,
     alignSelf: 'center',
-    height: 69,
-    marginBottom: 24,
+    height: 50,
     width: 291
   }
 });

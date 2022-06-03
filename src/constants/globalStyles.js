@@ -26,6 +26,14 @@ export default {
     flex: 1
   },
 
+    // containers
+  // ///////////////////////////////////////////////////////////////////////////
+  containers: {
+    backgroundColor: colors.black,
+    flex: 1,
+    justifyContent: 'flex-start'
+  },
+
   // flex
   // ///////////////////////////////////////////////////////////////////////////
   flex1: { flex: 1 },
@@ -106,11 +114,12 @@ export default {
   // ///////////////////////////////////////////////////////////////////////////
   heading: {
     color: colors.heading,
-    fontFamily: fonts.medium,
+    fontFamily: fonts.bold,
     fontSize: 20,
-    marginBottom: 6,
+    marginBottom: 10,
     marginLeft: 4,
-    marginTop: 16
+    marginTop: 25,
+    fontWeight: "semi-bold"
   },
 
   // nav tab

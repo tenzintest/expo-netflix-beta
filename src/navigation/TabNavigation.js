@@ -56,15 +56,16 @@ export default () => (
       name="StackDownloads"
       component={StackDownloads}
       options={{
-        tabBarLabel: 'Downloads'
+        tabBarLabel: 'New'
       }}
     />
     <Tab.Screen
       name="StackMore"
       component={StackMore}
       options={{
-        tabBarLabel: 'More'
+        tabBarLabel: 'Me'
       }}
     />
+
   </Tab.Navigator>
 );
